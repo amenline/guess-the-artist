@@ -14,7 +14,7 @@
     "start": "concurrently \"yarn workspace server start\" \"yarn workspace client start\"",
     "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client start\"",
     "build": "concurrently \"yarn workspace server build\" \"yarn workspace client build\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^7.4.0"
