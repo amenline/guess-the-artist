@@ -34,6 +34,8 @@ import cors from 'cors';
       ApolloServerPluginLandingPageGraphQLPlayground({}),
       ApolloServerPluginLandingPageDisabled(),
     ],
+    context,
+    introspection: true,
   });
 
   await apolloServer.start();
