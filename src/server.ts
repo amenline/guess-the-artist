@@ -11,10 +11,14 @@ import { buildSchema } from 'type-graphql';
 import { ScoreResolver } from './resolvers';
 import cors from 'cors';
 
+// import path from 'path';
+
 (async () => {
   const app = express();
   app.use(cors());
   const port = process.env.PORT || 5000;
+
+  // console.log(path.join(dirname, './entity/Score.ts'))
 
   app.get('/', (_req, res) => res.send('Hello'));
 
