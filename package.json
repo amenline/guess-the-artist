@@ -11,9 +11,10 @@
     "client"
   ],
   "scripts": {
-    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client start\"",
-    "dev": "concurrently \"yarn workspace server dev\" \"yarn workspace client start\"",
-    "build": "concurrently \"yarn workspace server build\" \"yarn workspace client build\""
+    "start": "concurrently \"yarn workspace client start\" \"yarn workspace server start\"",
+    "dev": "concurrently \"yarn workspace client start\" \"yarn workspace server dev\"",
+    "build": "concurrently \"yarn workspace client build\" \"yarn workspace server build\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install && yarn run build"
   },
   "dependencies": {
     "concurrently": "^7.4.0"
